@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+<style>
+    body{
+        direction: rtl;
+    }
+    .mydiv{
+        display: none;
+    }
+    .mybigdiv{
+        position: fixed;
+        bottom: 10px;  
+        right: 10px;
+    }
+</style>
+    </head>
+    <body>
+        <!-- floating btn -->
+        <div class="mybigdiv">
+        <div class="mydiv">
+            <h2>hello</h2>
+        </div>
+        <button class="mybtn btn btn-secondary">click here</button>
+        </div>
+        
+<!-- data table -->
+        <table id="exampled" class="display cell-border">
+                <thead>
+                <tr>
+                    <th> item1</th>
+                    <th> item2 </th>
+                    <th>item3</th>
+                    <th>item4</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                 <td>1</td>
+                 <td>2</td>
+                 <td>3</td>
+                 <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                   </tr>
+                   <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                   </tr>
+                   <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                   </tr>
+               
+                </tbody>
+            </table>
+            <!-- contact form -->
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form class="contactusform">
+                               <input  type="text" class="form-control" placeholder="الاسم الاول"/>
+                               <input  type="text" class="form-control" placeholder="الاسم الاخير"/>
+                               <input  style="direction: rtl;" type="email" class="form-control" placeholder=" البريد الالكتروني"/>
+                               <input  style="direction: rtl;" type="tel" class="form-control" placeholder=" رقم الهاتف"/>
+                               <input  type="text" class="form-control" placeholder=" العنوان"/>
+                               <textarea  class="form-control" placeholder="رسالة"></textarea>
+                               <button  type="submit" class="btn btn-primary">ارسال</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+     <script>
+        $(document).ready(function(){
+            // slide toggle
+            $("button").click(function(){
+  $(".mydiv").slideToggle();
+});
+// data table
+$('.display').DataTable({
+            responsive: true,
+            ordering:true,
+            bPaginate: true,
+        });
+});
+
+        </script>
+    </body>
+</html>
